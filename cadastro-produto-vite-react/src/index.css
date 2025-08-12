@@ -1,0 +1,172 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #555;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  margin-top: 40px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  width: 100%;
+}
+
+form button {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+.erro {
+  color: #dc3545;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.resumo-estoque {
+  background-color: #e9ecef;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.resumo-estoque p {
+  margin: 5px 0;
+}
+
+.filtros-ordenacao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.filtro-busca {
+  display: flex;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.filtro-busca input,
+.filtro-busca select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.ordenacao-botoes button {
+  background-color: #f8f9fa;
+  color: #333;
+  border: 1px solid #ccc;
+  margin-left: 8px;
+}
+
+.ordenacao-botoes button:hover {
+  background-color: #e2e6ea;
+}
+
+.lista-produtos ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item-produto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.item-produto:last-child {
+  border-bottom: none;
+}
+
+.produto-info {
+  flex-grow: 1;
+}
+
+.produto-info b {
+  font-size: 18px;
+}
+
+.produto-info .descricao {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.produto-acoes button {
+  margin-left: 10px;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+.btn-editar {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.btn-remover {
+  background-color: #dc3545;
+  color: white;
+}
