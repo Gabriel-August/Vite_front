@@ -1,0 +1,126 @@
+/* Estilo geral para o container */
+.crud-container {
+  max-width: 700px;
+  /* * A MUDANÇA ESTÁ AQUI:
+   * Removemos a margem do topo (que era 40px)
+   * e mantivemos as margens laterais automáticas.
+   */
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%; /* Garante que ele use o espaço disponível */
+  
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.crud-container h1 {
+  text-align: center;
+  color: #222;
+  margin-bottom: 25px;
+}
+
+/* Formulário de Input */
+.crud-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.crud-input {
+  flex-grow: 1;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.crud-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+/* Botões */
+.crud-btn {
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap; 
+}
+
+.crud-btn:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.btn-add {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-update {
+  background-color: #28a745;
+  color: white;
+}
+
+/* Lista de Itens */
+.crud-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.empty-message {
+  text-align: center;
+  color: #888;
+  padding: 20px;
+}
+
+/* Cada Item da Lista */
+.crud-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #fcfcfc;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  transition: background-color 0.2s;
+}
+
+.crud-item:hover {
+  background-color: #f9f9f9;
+}
+
+.item-name {
+  font-size: 17px;
+  color: #333;
+  word-break: break-all;
+  padding-right: 15px;
+}
+
+.item-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.btn-edit {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.btn-delete {
+  background-color: #dc3545;
+  color: white;
+}
