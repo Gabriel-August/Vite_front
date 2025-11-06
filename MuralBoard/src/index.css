@@ -1,0 +1,149 @@
+/* ------------------------- */
+/* Formulário de recados */
+/* ------------------------- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.15);
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+form button {
+  align-self: flex-end;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background-color: #43a047;
+  transform: translateY(-2px);
+}
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 30px;
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+form textarea {
+  grid-column: 1 / span 2; /* faz o textarea ocupar toda a largura */
+}
+form button {
+  grid-column: 2 / 3;
+  justify-self: end;
+}
+/* ------------------------- */
+/* Botões de ação nos recados */
+/* ------------------------- */
+.acoes {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.acoes button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.acoes .editar {
+  background-color: #1976d2;
+  color: white;
+}
+
+.acoes .editar:hover {
+  background-color: #1565c0;
+}
+
+.acoes .excluir {
+  background-color: #e53935;
+  color: white;
+}
+
+.acoes .excluir:hover {
+  background-color: #c62828;
+}
+
+/* ------------------------- */
+/* Formulário de edição inline */
+/* ------------------------- */
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.edit-form input,
+.edit-form textarea,
+.edit-form select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+.btns-editar {
+  display: flex;
+  gap: 10px;
+}
+
+.btns-editar .salvar {
+  background-color: #43a047;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btns-editar .cancelar {
+  background-color: #9e9e9e;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
