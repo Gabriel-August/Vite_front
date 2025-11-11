@@ -1,0 +1,115 @@
+/* 🌿 Estilo geral */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #e9f5ec;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+/* 🌿 Formulário */
+.task-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.task-form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.task-form button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.task-form button:hover {
+  background-color: #1b5e20;
+}
+
+/* 🌿 Lista de tarefas */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.task-item.done {
+  background-color: #d9ffd9;
+  text-decoration: line-through;
+  color: #777;
+}
+
+.task-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-title {
+  font-weight: bold;
+}
+
+.task-category {
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* 🌿 Botões */
+.task-actions button {
+  margin-left: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 8px 10px;
+  color: white;
+}
+
+.done-btn {
+  background-color: #43a047;
+}
+
+.undo {
+  background-color: #fbc02d;
+}
+
+.delete-btn {
+  background-color: #e53935;
+}
+
+.no-tasks {
+  text-align: center;
+  color: #777;
+  margin-top: 20px;
+}
