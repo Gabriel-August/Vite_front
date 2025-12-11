@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reservation System</title>
+</head>
+<body>
+    <h1>Reservation System</h1>
+
+    <h2>Create User</h2>
+    <input type="text" id="userName" placeholder="Name">
+    <input type="email" id="userEmail" placeholder="Email">
+    <button onclick="createUser()">Create User</button>
+
+    <h2>Create Room</h2>
+    <input type="text" id="roomName" placeholder="Name">
+    <input type="number" id="roomCapacity" placeholder="Capacity">
+    <button onclick="createRoom()">Create Room</button>
+
+    <h2>Create Reservation</h2>
+    <input type="number" id="userId" placeholder="User ID">
+    <input type="number" id="roomId" placeholder="Room ID">
+    <input type="datetime-local" id="startTime">
+    <input type="datetime-local" id="endTime">
+    <button onclick="createReservation()">Create Reservation</button>
+
+    <h2>Reservations</h2>
+    <ul id="reservations"></ul>
+
+    <script>
+        async function createUser() {
+            const name = document.getElementById('userName').value;
+            const email = document.getElementById('userEmail').value;
+            await fetch('/users', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, email })
+            });
+        }
+
+        async function createRoom() {
+            const name = document.getElementById('roomName').value;
+            const capacity = document.getElementById('roomCapacity').value;
+            await fetch('/rooms', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, capacity })
+            });
+        }
+
+        async function createReservation() {
+            const userId = document.getElementById('userId').value;
+            const roomId = document.getElementById('roomId').value;
+            const startTime = document.getElementById('startTime').value;
+            const endTime = document.getElementById('endTime').value;
+            await fetch('/reservations', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    user: { id: userId },
+                    room: { id: roomId },
+                    startTime,
+                    endTime
+                })
+            });
+            loadReservations();
+        }
+
+        async function loadReservations() {
+            const response = await fetch('/reservations');
+            const reservations = await response.json();
+            const reservationList = document.getElementById('reservations');
+            reservationList.innerHTML = '';
+            for (const reservation of reservations) {
+                const li = document.createElement('li');
+                li.textContent = `Reservation ${reservation.id}: Room ${reservation.room.name} by ${reservation.user.name}`;
+                const button = document.createElement('button');
+                button.textContent = 'Cancel';
+                button.onclick = () => cancelReservation(reservation.id);
+                li.appendChild(button);
+                reservationList.appendChild(li);
+            }
+        }
+
+        async function cancelReservation(id) {
+            await fetch(`/reservations/${id}`, { method: 'DELETE' });
+            loadReservations();
+        }
+
+        loadReservations();
+    </script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+header h1 {
+  font-size: 2.5em;
+  line-height: 1.1;
+  text-align: center;
+  color: #646cff;
+}
+
+/* Formulário */
+.mood-form {
+  background-color: #2c2c2c;
+  padding: 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mood-form input,
+.mood-form select {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 4px;
+  border: 1px solid #555;
+  background-color: #333;
+  color: white;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Lista de Humor */
+.mood-list {
+  margin-top: 2rem;
+}
+
+.mood-list ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mood-list li {
+  background-color: #2c2c2c;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.mood-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.mood-icon {
+  font-size: 1.2rem;
+}
+
+.mood-date {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.mood-description {
+  margin: 0.5rem 0;
+  color: #ccc;
+}
+
+.mood-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.edit-btn {
+  background-color: #444;
+}
+.delete-btn {
+  background-color: #b22222;
+}
+
+/* Resumo */
+.mood-summary {
+  background-color: #2c2c2c;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.summary-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.summary-item {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.summary-count {
+  font-weight: bold;
+  color: #646cff;
+}
+
+.empty-message {
+  text-align: center;
+  color: #888;
+  margin-top: 2rem;
+}
+
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  color: #888;
+}
